@@ -11,6 +11,8 @@ const Navbar = () => {
 
     let login = JSON.parse(localStorage.getItem('login'));
 
+    
+
    
 
     useEffect(() => {
@@ -51,7 +53,7 @@ const Navbar = () => {
                             Cart
                         </Link>
                         <span className="cartCount"><ShoppingCartIcon />{items.length}</span>
-
+ 
                         {
                             login ? <button onClick={Logout} style={{ padding: '5px 20px', marginLeft: '10px' }}><a href=''>Logout</a> </button> : <button style={{ padding: '5px 20px', marginLeft: '10px' }}><a href='/'>Login</a> </button>
                         }
@@ -59,7 +61,7 @@ const Navbar = () => {
 
 
 
-                        <Avatar sx={{ marginLeft: '10px' }} alt="Remy Sharp" src={login?.avatar} />
+                        <Avatar sx={{ marginLeft: '10px' }} alt="Remy Sharp" src={login?.photoURL} /> 
 
 
 
